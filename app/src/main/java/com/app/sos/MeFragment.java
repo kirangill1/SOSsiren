@@ -1,14 +1,15 @@
 package com.app.sos;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class SupportActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MeFragment extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_support);
+        setContentView(R.layout.activity_me_fragment);
     }
 }

@@ -4,8 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="#CEC5C5"
-    android:gravity="center"
+    android:background="#fff"
     android:layout_height="match_parent">
 
     <TextView
@@ -13,23 +12,13 @@
         android:layout_height="wrap_content"
         android:text="CIVIL SECURITY"
         android:textSize="30dp"
-        android:textStyle="bold"
+
+        android:layout_gravity="center"
         android:textColor="#fff"
         android:layout_margin="40dp"
         android:id="@+id/civil"
-        android:layout_gravity="center"
         />
-    <TextView
-        android:id="@+id/text_gallery"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textColor="#fff"
-        android:textSize="20sp"
-        />
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="100dp"
@@ -40,20 +29,67 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#fff"
         android:layout_marginTop="50dp"
-        android:background="#4B2A2A"
+        android:background="@drawable/rectangle"
         android:gravity="center"
         android:onClick="open_map"
-        android:layout_margin="40dp"
+        android:layout_margin="20dp"
         android:text="Show Map"
         />
-
-    <RelativeLayout
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rectangle"
+        android:gravity="center"
+        android:onClick="add_relatives"
+        android:layout_margin="20dp"
+        android:text="Add Persons"
         />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rectangle"
+        android:gravity="center"
+        android:onClick="recording"
+        android:layout_margin="20dp"
+        android:text="PLAY RECORDINGS"
+        />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start recording"
+        android:visibility="gone"
+        android:onClick="start_record"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop recording"
+        android:visibility="gone"
+        android:onClick="stop_record"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play recording"
+        android:visibility="gone"
+        android:onClick="start_play"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop playing"
+        android:visibility="gone"
+        android:onClick="stop_play"
+        />
+    </RelativeLayout>
 
 
 </LinearLayout>

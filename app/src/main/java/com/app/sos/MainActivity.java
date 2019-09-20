@@ -26,11 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static Activity main_activity;
 
-    private EditText contact1 , contact2 , contact3;
 
-    private EditText name1 , name2 , name3;
-
-    private final String  SHARED_PREF_NAME = "persons";
 
     String[] PERMISSIONS = {
             Manifest.permission.ACCESS_COARSE_LOCATION,
@@ -50,23 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         drawerLayout = findViewById(R.id.drawer_activity);
 
-        contact1 = findViewById(R.id.contact);
-        contact2 = findViewById(R.id.contact2);
-        contact3 = findViewById(R.id.contact3);
 
-        name1 = findViewById(R.id.name);
-        name2 = findViewById(R.id.name2);
-        name3 = findViewById(R.id.name3);
-
-        SharedPreferences sp = getSharedPreferences(SHARED_PREF_NAME , MODE_PRIVATE);
-
-        name1.setText(sp.getString("name1" , ""));
-        name2.setText(sp.getString("name2" , ""));
-        name3.setText(sp.getString("name3" , ""));
-
-        contact1.setText(sp.getString("contact1" , ""));
-        contact2.setText(sp.getString("contact2" , ""));
-        contact3.setText(sp.getString("contact3" , ""));
 
         if(!hasPermissions(this, PERMISSIONS)){
             ActivityCompat.requestPermissions(this, PERMISSIONS, PERMISSION_ALL);
@@ -81,9 +61,9 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout.closeDrawer(GravityCompat.START);
     }
 
-    public void open_support(View view) {
+    public void open_setting(View view) {
 
-        Intent i = new Intent(MainActivity.this  , SupportActivity.class);
+        Intent i = new Intent(MainActivity.this  , SettingActivity.class);
         startActivity(i);
 
         drawerLayout.closeDrawer(GravityCompat.START);
@@ -97,7 +77,11 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout.closeDrawer(GravityCompat.START);
 
     }
-
+    public void log_out (View v){
+        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+        startActivity(intent);
+        finish();
+    }
     public void open_financial_security(View view) {
 
         Intent i = new Intent(MainActivity.this  , FinancialSecurityActivity.class);
@@ -139,29 +123,4 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    public void save_persons(View view) {
-
-        String name_str = name1.getText().toString();
-        String name2_str = name2.getText().toString();
-        String name3_str = name3.getText().toString();
-
-        String contact_str = contact1.getText().toString();
-        String contact2_str = contact2.getText().toString();
-        String contact3_str = contact3.getText().toString();
-
-        SharedPreferences.Editor sp = getSharedPreferences(SHARED_PREF_NAME , MODE_PRIVATE).edit();
-
-        sp.putString("name1" , name_str);
-        sp.putString("name2" , name2_str);
-        sp.putString("name3" , name3_str);
-
-        sp.putString("contact1" , contact_str);
-        sp.putString("contact2" , contact2_str);
-        sp.putString("contact3" , contact3_str);
-
-        sp.commit();
-
-        Toast.makeText(MainActivity.this , "Person contact saved" , Toast.LENGTH_SHORT).show();
-
-    }
 }
