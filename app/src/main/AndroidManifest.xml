@@ -22,26 +22,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MeFragment"></activity>
-        <activity android:name=".ImageFragment" />
-        <activity android:name=".DeviceFragment" />
-        <activity
-            android:name=".ui.login.DeviceFragment"
-            android:label="@string/title_activity_device_fragment" />
-        <activity android:name=".AboutusActivity" />
-        <activity android:name=".ForgetpassActivity" />
-        <activity android:name=".ChangepasswordActivity" />
-        <activity android:name=".UpdateprofileActivity" />
-        <activity android:name=".SettingActivity" />
-        <activity android:name=".AudioRecorder" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".AddpersonActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".AudioRecorder" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".AddpersonActivity" />
+        <activity android:name=".LoginActivity">
+
         </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -55,9 +47,15 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".ContactUsActivity" />
+        <activity android:name=".SettingActivity" />
         <activity android:name=".BillingActivity" />
         <activity android:name=".FinancialSecurityActivity" />
         <activity android:name=".CivilSecurityActivity" />
+        <activity android:name=".AboutusActivity" />
+        <activity android:name=".ForgetpassActivity" />
+        <activity android:name=".OtpActivity" />
+        <activity android:name=".ChangepasswordActivity" />
+        <activity android:name=".UpdateprofileActivity" />
         <activity
             android:name=".AlertDialogActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />

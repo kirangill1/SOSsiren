@@ -6,6 +6,24 @@
     android:orientation="vertical"
     android:background="#fff"
     android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/addperson"
+            android:layout_centerVertical="true"
+            android:paddingLeft="360dp"
+
+            android:clickable="true"
+            android:onClick="add_person">
+
+        </ImageView>
+
+    </RelativeLayout>
 
     <TextView
         android:layout_width="wrap_content"
@@ -14,7 +32,7 @@
         android:textSize="30dp"
 
         android:layout_gravity="center"
-        android:textColor="#fff"
+
         android:layout_margin="40dp"
         android:id="@+id/civil"
         />
@@ -35,16 +53,6 @@
         android:onClick="open_map"
         android:layout_margin="20dp"
         android:text="Show Map"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/rectangle"
-        android:gravity="center"
-        android:onClick="add_relatives"
-        android:layout_margin="20dp"
-        android:text="Add Persons"
         />
 
     <Button
@@ -90,6 +98,10 @@
         android:onClick="stop_play"
         />
     </RelativeLayout>
+
+
+
+
 
 
 </LinearLayout>

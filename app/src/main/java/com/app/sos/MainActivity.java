@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.Manifest;
 import android.app.Activity;
@@ -109,6 +111,45 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout.openDrawer(GravityCompat.START);
     }
 
+    public void open_devices(View view) {
+        FragmentManager fm = getSupportFragmentManager();
+
+        FragmentTransaction ft = fm.beginTransaction();
+
+        DeviceFragment devices = new DeviceFragment();
+
+        ft.replace(R.id.main_frame , devices );
+
+        ft.commit();
+
+
+
+    }
+
+    public void open_images(View view) {
+
+        FragmentManager fm = getSupportFragmentManager();
+
+        FragmentTransaction ft = fm.beginTransaction();
+
+        ImageFragment images = new ImageFragment();
+
+        ft.replace(R.id.main_frame , images );
+
+        ft.commit();
+    }
+
+    public void open_me(View view) {
+        FragmentManager fm = getSupportFragmentManager();
+
+        FragmentTransaction ft = fm.beginTransaction();
+
+        MeFragment me= new MeFragment();
+
+        ft.replace(R.id.main_frame , me );
+
+        ft.commit();
+    }
 
     // function to check if permissions are granted
 

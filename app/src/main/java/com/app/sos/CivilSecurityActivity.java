@@ -79,13 +79,7 @@ public class CivilSecurityActivity extends AppCompatActivity {
 
     }
 
-    public void add_relatives(View view) {
 
-        Intent i = new Intent(CivilSecurityActivity.this, AddpersonActivity.class);
-
-        startActivity(i);
-
-    }
 
     private void sendSMS(String phoneNumber, String message) {
 
@@ -294,4 +288,10 @@ public class CivilSecurityActivity extends AppCompatActivity {
         finish();
     }
 
+    public void add_person(View view) {
+        Intent i = new Intent(CivilSecurityActivity.this, AddpersonActivity.class);
+
+        startActivity(i);
+
+    }
 }
